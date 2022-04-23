@@ -1,22 +1,25 @@
 <template>
-  <button
-    class="simple_button font-weight-bold display-1"
-    @click="redirect(cards[0].route, true)"
-  ></button>
+  <div>
+    <div>
+      <button-group>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+      </button-group>
+    </div>
+    <div>
+      <button-group>
+        <button>Button 4</button>
+        <button>Button 5</button>
+        <button>Button 6</button>
+      </button-group>
+    </div>
+    <div>
+      <button-group>
+        <button>Button 7</button>
+        <button>Button 8</button>
+        <button>Button 9</button>
+      </button-group>
+    </div>
+  </div>
 </template>
-
-<style>
-.simple_button {
-  background-color: white;
-  background-image: url(C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\merlot.jpg);
-  height: 200px;
-  width: 200px;
-  border: none;
-  border-radius: 50%;
-  padding: 0px;
-  text-align: center;
-  display: inline-block;
-  outline: none;
-  border: 0;
-}
-</style>

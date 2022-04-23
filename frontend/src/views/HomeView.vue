@@ -37,6 +37,4 @@
   </div>
 </template>
 
-<script>
-/* eslint-disable */
-</script>
+<script></script>
