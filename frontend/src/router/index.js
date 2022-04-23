@@ -11,11 +11,6 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  {
-    path: '/player',
-    name: 'player',
-    component: Player
-  },
 
   {
     path: '/about',
