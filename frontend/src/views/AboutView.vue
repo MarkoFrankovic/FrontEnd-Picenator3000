@@ -6,7 +6,7 @@
           alt="stock"
           src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\stock.jpgg"
         />
-        <button v-on:click="player">Button 1</button>
+        <button v-on:click="prebacivanje">Button 1</button>
         <button>Button 2</button>
         <button>Button 3</button>
       </button-group>
@@ -29,7 +29,10 @@
 </template>
 
 <script>
-/* eslint-disable */
 methods: {
+  prebacivanje();
+  {
+    this.$router.push("/player");
+  }
 }
 </script>
