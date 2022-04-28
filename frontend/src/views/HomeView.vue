@@ -1,4 +1,3 @@
-cl
 <template>
   <div class="signup">
     <h1>Prijava</h1>
