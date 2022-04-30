@@ -2,27 +2,120 @@
   <div>
     <div>
       <button-group>
+        <img src:
+        aria-required="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+        class="img-thumbnail" alt="Stock" />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
         <img
-          alt="stock"
-          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\stock.jpgg"
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
         />
-        <button v-on:click="prebacivanje">Button 1</button>
-        <button v-on:click="prebacivanje">Button 2</button>
-        <button v-on:click="prebacivanje">Button 3</button>
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
       </button-group>
     </div>
     <div>
       <button-group>
-        <button v-on:click="prebacivanje">Button 4</button>
-        <button v-on:click="prebacivanje">Button 5</button>
-        <button v-on:click="prebacivanje">Button 6</button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
       </button-group>
     </div>
     <div>
       <button-group>
-        <button v-on:click="prebacivanje">Button 7</button>
-        <button v-on:click="prebacivanje">Button 8</button>
-        <button v-on:click="prebacivanje">Button 9</button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Stock
+        </button>
       </button-group>
     </div>
   </div>
@@ -32,7 +125,7 @@
 export default {
   methods: {
     prebacivanje() {
-      this.$router.push("/player");
+      this.$router.push("/pjesme");
     },
   },
 };

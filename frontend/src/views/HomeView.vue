@@ -7,7 +7,7 @@
         <div class="col-sm">
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Username</label>
+              <label for="exampleInputEmail1">Email</label>
               <input
                 type="email"
                 class="form-control"
@@ -15,9 +15,6 @@
                 aria-describedby="emailHelp"
                 placeholder="Upiši mail"
               />
-              <small id="emailHelp" class="form-text text-muted"
-                >Nemoj djelit s drugima svoje podatke.</small
-              >
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -27,8 +24,13 @@
                 id="exampleInputPassword1"
                 placeholder="Password"
               />
+              <small id="emailHelp" class="form-text text-muted"
+                >Nemojte djeliti svoje podatke s drugima</small
+              >
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" style="margin: 1em">
+              Submit
+            </button>
           </form>
         </div>
         <div class="col-sm"></div>
@@ -37,4 +39,10 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    autentifikacija() {},
+  },
+};
+</script>
