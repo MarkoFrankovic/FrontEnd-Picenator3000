@@ -25,9 +25,21 @@ const routes = [
   },
 
   {
-    path: '/pjesme',
-    name: 'pjesme',
-    component: () => import(/* webpackChunkName: "pjesme" */ '../views/PjesmeView.vue')
+    path: '/pjesmebambus',
+    name: 'pjesmebambus',
+    component: () => import(/* webpackChunkName: "pjesmebambus" */ '../views/PjesmeViewBambus.vue')
+  },
+
+  {
+    path: '/pjesmejaeger',
+    name: 'pjesmejaeger',
+    component: () => import(/* webpackChunkName: "pjesmejaeger" */ '../views/PjesmeViewJaeger.vue')
+  },
+
+  {
+    path: '/pjesmegin',
+    name: 'pjesmegin',
+    component: () => import(/* webpackChunkName: "pjesmegin" */ '../views/PjesmeViewGin.vue')
   }
   
 ]

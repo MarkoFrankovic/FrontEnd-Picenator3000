@@ -6,34 +6,30 @@
         aria-required="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
         class="img-thumbnail" alt="Stock" />
         <button
-          v-on:click="prebacivanje"
+          v-on:click="bambus"
           type="button"
           class="btn btn-outline-primary"
         >
           Bambus
         </button>
         <img
-          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\đeger-cola.jpg"
           class="img-thumbnail"
           alt="Stock"
         />
         <button
-          v-on:click="prebacivanje"
+          v-on:click="jaeger"
           type="button"
           class="btn btn-outline-primary"
         >
           Jager-Cola
         </button>
         <img
-          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\gin-tonic.jpg"
           class="img-thumbnail"
           alt="Stock"
         />
-        <button
-          v-on:click="prebacivanje"
-          type="button"
-          class="btn btn-outline-primary"
-        >
+        <button v-on:click="gin" type="button" class="btn btn-outline-primary">
           Gin-Tonic
         </button>
       </button-group>
@@ -45,11 +41,7 @@
           class="img-thumbnail"
           alt="Stock"
         />
-        <button
-          v-on:click="prebacivanje"
-          type="button"
-          class="btn btn-outline-primary"
-        >
+        <button v-on:click="jack" type="button" class="btn btn-outline-primary">
           Jack s ledom
         </button>
         <img
@@ -58,7 +50,7 @@
           alt="Stock"
         />
         <button
-          v-on:click="prebacivanje"
+          v-on:click="merlot"
           type="button"
           class="btn btn-outline-primary"
         >
@@ -70,7 +62,7 @@
           alt="Stock"
         />
         <button
-          v-on:click="prebacivanje"
+          v-on:click="stock"
           type="button"
           class="btn btn-outline-primary"
         >
@@ -86,7 +78,7 @@
           alt="Stock"
         />
         <button
-          v-on:click="prebacivanje"
+          v-on:click="travarica"
           type="button"
           class="btn btn-outline-primary"
         >
@@ -97,11 +89,7 @@
           class="img-thumbnail"
           alt="Stock"
         />
-        <button
-          v-on:click="prebacivanje"
-          type="button"
-          class="btn btn-outline-primary"
-        >
+        <button v-on:click="voda" type="button" class="btn btn-outline-primary">
           Voda
         </button>
         <img
@@ -110,7 +98,7 @@
           alt="Stock"
         />
         <button
-          v-on:click="prebacivanje"
+          v-on:click="vodka"
           type="button"
           class="btn btn-outline-primary"
         >
@@ -124,8 +112,32 @@
 <script>
 export default {
   methods: {
-    prebacivanje() {
-      this.$router.push("/pjesme");
+    bambus() {
+      this.$router.push("/pjesmebambus");
+    },
+    jaeger() {
+      this.$router.push("/pjesmejaeger");
+    },
+    gin() {
+      this.$router.push("/pjesmegin");
+    },
+    jack() {
+      this.$router.push("/pjesmegin");
+    },
+    merlot() {
+      this.$router.push("/pjesmegin");
+    },
+    stock() {
+      this.$router.push("/pjesmegin");
+    },
+    travarica() {
+      this.$router.push("/pjesmegin");
+    },
+    voda() {
+      this.$router.push("/pjesmegin");
+    },
+    vodka() {
+      this.$router.push("/pjesmegin");
     },
   },
 };
