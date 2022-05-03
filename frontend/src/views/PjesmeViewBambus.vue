@@ -4,20 +4,22 @@
       <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
         Natrag na odabir pića
       </button>
-      <div class="dropdown">
+      <div class="btn-group">
         <button
-          class="btn btn-secondary dropdown-toggle"
           type="button"
-          id="dropdownMenuButton1"
+          class="btn btn-danger dropdown-toggle"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          style="margin: 1em"
         >
           Filter
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Filtriraj po ratingu</a></li>
+        <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Filtriraj po abecedi</a></li>
+          <li>
+            <a class="dropdown-item" href="#"
+              >Filtriraj po korisničkom ratingu</a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -31,6 +33,10 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+
+    <div class="badge bg-primary text-wrap" height="315" style="margin: 1em">
+      Ime pjesme: Izvođač: Korisnička ocjena:
+    </div>
 
     <div>
       <iframe
