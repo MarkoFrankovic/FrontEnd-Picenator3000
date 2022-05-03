@@ -4,7 +4,24 @@
       <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
         Natrag na odabir pića
       </button>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="margin: 1em"
+        >
+          Filter
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Filtriraj po ratingu</a></li>
+          <li><a class="dropdown-item" href="#">Filtriraj po abecedi</a></li>
+        </ul>
+      </div>
     </div>
+
     <iframe
       width="560"
       height="315"
