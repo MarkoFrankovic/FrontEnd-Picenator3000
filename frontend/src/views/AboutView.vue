@@ -10,7 +10,7 @@
           type="button"
           class="btn btn-outline-primary"
         >
-          Stock
+          Bambus
         </button>
         <img
           src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
@@ -22,7 +22,7 @@
           type="button"
           class="btn btn-outline-primary"
         >
-          Stock
+          Jager-Cola
         </button>
         <img
           src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
@@ -34,47 +34,7 @@
           type="button"
           class="btn btn-outline-primary"
         >
-          Stock
-        </button>
-      </button-group>
-    </div>
-    <div>
-      <button-group>
-        <img
-          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
-          class="img-thumbnail"
-          alt="Stock"
-        />
-        <button
-          v-on:click="prebacivanje"
-          type="button"
-          class="btn btn-outline-primary"
-        >
-          Stock
-        </button>
-        <img
-          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
-          class="img-thumbnail"
-          alt="Stock"
-        />
-        <button
-          v-on:click="prebacivanje"
-          type="button"
-          class="btn btn-outline-primary"
-        >
-          Stock
-        </button>
-        <img
-          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
-          class="img-thumbnail"
-          alt="Stock"
-        />
-        <button
-          v-on:click="prebacivanje"
-          type="button"
-          class="btn btn-outline-primary"
-        >
-          Stock
+          Gin-Tonic
         </button>
       </button-group>
     </div>
@@ -90,7 +50,7 @@
           type="button"
           class="btn btn-outline-primary"
         >
-          Stock
+          Jack s ledom
         </button>
         <img
           src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
@@ -102,7 +62,7 @@
           type="button"
           class="btn btn-outline-primary"
         >
-          Stock
+          Merlot
         </button>
         <img
           src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
@@ -114,7 +74,47 @@
           type="button"
           class="btn btn-outline-primary"
         >
-          Stock
+          Stock-Cola
+        </button>
+      </button-group>
+    </div>
+    <div>
+      <button-group>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Travarica
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Voda
+        </button>
+        <img
+          src="C:\Users\Marko\Documents\GitHub\FrontEnd-Picenator3000\frontend\src\assets\bambus.jpg"
+          class="img-thumbnail"
+          alt="Stock"
+        />
+        <button
+          v-on:click="prebacivanje"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          Vodka-Juice
         </button>
       </button-group>
     </div>
@@ -123,7 +123,6 @@
 
 <script>
 export default {
-  name: "korisnik",
   methods: {
     prebacivanje() {
       this.$router.push("/pjesme");
