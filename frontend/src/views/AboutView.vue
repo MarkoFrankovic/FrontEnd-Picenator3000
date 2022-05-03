@@ -122,22 +122,22 @@ export default {
       this.$router.push("/pjesmegin");
     },
     jack() {
-      this.$router.push("/pjesmegin");
+      this.$router.push("/pjesmejack");
     },
     merlot() {
-      this.$router.push("/pjesmegin");
+      this.$router.push("/pjesmemerlot");
     },
     stock() {
-      this.$router.push("/pjesmegin");
+      this.$router.push("/pjesmestock");
     },
     travarica() {
-      this.$router.push("/pjesmegin");
+      this.$router.push("/pjesmetravarica");
     },
     voda() {
-      this.$router.push("/pjesmegin");
+      this.$router.push("/pjesmevoda");
     },
     vodka() {
-      this.$router.push("/pjesmegin");
+      this.$router.push("/pjesmevodka");
     },
   },
 };

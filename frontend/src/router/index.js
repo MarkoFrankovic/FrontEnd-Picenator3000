@@ -40,7 +40,44 @@ const routes = [
     path: '/pjesmegin',
     name: 'pjesmegin',
     component: () => import(/* webpackChunkName: "pjesmegin" */ '../views/PjesmeViewGin.vue')
-  }
+  },
+
+  {
+    path: '/pjesmejack',
+    name: 'pjesmejack',
+    component: () => import(/* webpackChunkName: "pjesmejack" */ '../views/PjesmeViewJack.vue')
+  },
+
+  {
+    path: '/pjesmemerlot',
+    name: 'pjesmemerlot',
+    component: () => import(/* webpackChunkName: "pjesmemerlot" */ '../views/PjesmeViewMerlot.vue')
+  },
+
+  {
+    path: '/pjesmestock',
+    name: 'pjesmestock',
+    component: () => import(/* webpackChunkName: "pjesmestock" */ '../views/PjesmeViewStock.vue')
+  },
+
+  {
+    path: '/pjesmetravarica',
+    name: 'pjesmetravarica',
+    component: () => import(/* webpackChunkName: "pjesmetravarica" */ '../views/PjesmeViewTravarica.vue')
+  },
+
+  {
+    path: '/pjesmevoda',
+    name: 'pjesmevoda',
+    component: () => import(/* webpackChunkName: "pjesmevoda" */ '../views/PjesmeViewVoda.vue')
+  },
+
+  {
+    path: '/pjesmevodka',
+    name: 'pjesmevodka',
+    component: () => import(/* webpackChunkName: "pjesmevodka" */ '../views/PjesmeViewVodka.vue')
+  },
+
   
 ]
 
