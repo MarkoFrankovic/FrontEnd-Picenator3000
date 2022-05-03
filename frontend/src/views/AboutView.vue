@@ -123,6 +123,7 @@
 
 <script>
 export default {
+  name: "korisnik",
   methods: {
     prebacivanje() {
       this.$router.push("/pjesme");

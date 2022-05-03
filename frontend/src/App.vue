@@ -3,7 +3,6 @@
     <nav>
       <router-link to="/">Autetifikacija</router-link>|
       <router-link to="/about">Pičenator</router-link>|
-      <router-link to="/pjesme">Pjesme</router-link>
     </nav>
 
     <router-view />
