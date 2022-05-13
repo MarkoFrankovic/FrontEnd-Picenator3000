@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Pičentaor3000</h1>
     <div>
       <div>
         <button-group class="text-center">
@@ -139,6 +140,9 @@
           </button>
         </button-group>
       </div>
+      <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
+        Natrag na login
+      </button>
     </div>
   </div>
 </template>
@@ -172,6 +176,9 @@ export default {
     },
     vodka() {
       this.$router.push("/pjesmevodka");
+    },
+    natrag() {
+      this.$router.push("/");
     },
   },
 };

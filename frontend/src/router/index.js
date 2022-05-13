@@ -19,6 +19,12 @@ const routes = [
   },
 
   {
+    path: '/admin',
+    name: 'admin',
+    component: () => import(/* webpackChunkName: "admin" */ '../views/AdminView.vue')
+  },
+
+  {
     path: '/player',
     name: 'player',
     component: () => import(/* webpackChunkName: "player" */ '../views/AudioPlayer.vue')

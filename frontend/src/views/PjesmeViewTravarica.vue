@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Piće: Travarica</h1>
     <LazyYoutube
       ref="youtubeLazyVideo"
       :src="youtubelinks[brojilo].url"

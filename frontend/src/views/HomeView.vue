@@ -7,28 +7,33 @@
         <div class="col-sm">
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
+              <label for="exampleInputEmail1">Korisničko ime</label>
               <input
-                type="email"
+                type="username"
                 class="form-control"
-                id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                placeholder="Upiši mail"
+                placeholder="Upiši korisničko ime"
+                :value="ime"
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
+              <label for="exampleInputPassword1">Lozinka</label>
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
                 placeholder="Password"
+                :value="loz"
               />
               <small id="emailHelp" class="form-text text-muted"
                 >Nemojte djeliti svoje podatke s drugima</small
               >
             </div>
-            <button type="submit" class="btn btn-primary" style="margin: 1em">
+            <button
+              @click="autentifikacija()"
+              type="submit"
+              class="btn btn-primary"
+              style="margin: 1em"
+            >
               Submit
             </button>
           </form>
@@ -41,8 +46,20 @@
 
 <script>
 export default {
+  data() {
+    return {
+      ime: "",
+      loz: "",
+    };
+  },
   methods: {
-    autentifikacija() {},
+    autentifikacija() {
+      if (this.ime == "korisnik" || this.loz == "korisnik") {
+        this.$router.push("/AboutView");
+      } else if (this.ime == "admin" || this.loz == "admin") {
+        this.$router.push("/AdminView");
+      }
+    },
   },
 };
 </script>

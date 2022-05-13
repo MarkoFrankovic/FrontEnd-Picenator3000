@@ -2,6 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="/">Autetifikacija</router-link>|
+      <router-link to="/admin">Admin</router-link>|
       <router-link to="/about">Pičenator</router-link>|
     </nav>
 

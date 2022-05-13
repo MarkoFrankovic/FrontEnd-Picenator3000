@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Piće: Bambus</h1>
     <LazyYoutube
       ref="youtubeLazyVideo"
       :src="youtubelinks[brojilo].url"
@@ -7,6 +8,9 @@
       aspect-ratio="16:9"
       thumbnail-quality="standard"
     />
+    <div>
+      <span>{{ youtubelinks[brojilo].ime }}</span>
+    </div>
 
     <div class="buttons">
       <button @click="prev()" class="btn btn-dark" style="margin: 1em">
@@ -37,6 +41,7 @@
         Next
       </button>
     </div>
+
     <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
       Natrag na odabir pića
     </button>
@@ -78,6 +83,7 @@ export default {
     console.log(rezultati);
     //this.youtubeLink = rezultati[2].url;
     this.youtubelinks = rezultati;
+    this.ime_ocjena = rezultati;
   },
   methods: {
     prev() {

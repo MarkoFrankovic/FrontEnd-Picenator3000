@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Piće: Stock-Colla</h1>
     <LazyYoutube
       ref="youtubeLazyVideo"
       :src="youtubelinks[brojilo].url"
@@ -63,7 +64,6 @@ export default {
   },
   data() {
     return {
-      //youtubeLink: "https://www.youtube.com/watch?v=vco21gmOPiY",
       youtubelinks: [{ url: "" }],
       brojilo: 0,
     };
