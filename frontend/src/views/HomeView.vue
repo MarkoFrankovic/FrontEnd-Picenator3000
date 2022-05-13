@@ -13,7 +13,7 @@
                 class="form-control"
                 aria-describedby="emailHelp"
                 placeholder="Upiši korisničko ime"
-                :value="ime"
+                v-bind:value="ime"
               />
             </div>
             <div class="form-group">
@@ -22,14 +22,14 @@
                 type="password"
                 class="form-control"
                 placeholder="Password"
-                :value="loz"
+                v-bind:value="loz"
               />
               <small id="emailHelp" class="form-text text-muted"
                 >Nemojte djeliti svoje podatke s drugima</small
               >
             </div>
             <button
-              @click="autentifikacija()"
+              @click="persist()"
               type="submit"
               class="btn btn-primary"
               style="margin: 1em"
@@ -52,6 +52,13 @@ export default {
       loz: "",
     };
   },
+  mounted() {
+    if (localStorage.name) {
+      this.ime = localStorage.getItem("ime");
+      this.loz = localStorage.getItem("loz");
+    }
+  },
+
   methods: {
     autentifikacija() {
       if (this.ime == "korisnik" || this.loz == "korisnik") {
