@@ -38,7 +38,7 @@
       v-model="pice"
     />
     <button
-      v-on:click="posalji_opet()"
+      v-on:click="posalji()"
       type="button"
       class="btn btn-dark"
       style="margin: 1em"
@@ -91,11 +91,13 @@ export default {
         ocjena: this.ocjena,
         pice: this.pice,
       };
+      JSON.stringify(data);
 
       console.log(data);
       xhr.send(data);
     },
 
+    /*
     async posalji_opet() {
       const response = await fetch("http://localhost:5000/upis", {
         method: "POST",
@@ -115,7 +117,7 @@ export default {
         console.log(data);
       });
     },
-
+*/
     natrag() {
       this.$router.push("/");
     },
