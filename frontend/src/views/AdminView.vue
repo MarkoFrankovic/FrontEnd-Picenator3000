@@ -85,16 +85,15 @@ export default {
         }
       };
 
-      let data = {
+      let podatci = {
         ime: this.izvodac_ime_pjesme,
         url: this.url,
         ocjena: this.ocjena,
         pice: this.pice,
       };
-      JSON.stringify(data);
 
-      console.log(data);
-      xhr.send(data);
+      console.log(podatci);
+      xhr.send(JSON.stringify(podatci));
     },
 
     /*
