@@ -37,7 +37,12 @@
       aria-describedby="button-addon1"
       v-model="pice"
     />
-    <button type="button" class="btn btn-dark" style="margin: 1em">
+    <button
+      v-on:click="posalji()"
+      type="button"
+      class="btn btn-dark"
+      style="margin: 1em"
+    >
       Submit
     </button>
     <div>
@@ -67,7 +72,28 @@ export default {
     }
   },
   methods: {
-    posalji() {},
+    posalji() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://localhost:5000/upis");
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.responseText);
+        }
+      };
+
+      let data = {
+        ime: this.izvodac_ime_pjesme,
+        url: this.url,
+        ocjena: this.ocjena,
+        pice: this.pice,
+      };
+
+      xhr.send(data);
+    },
 
     natrag() {
       this.$router.push("/");
