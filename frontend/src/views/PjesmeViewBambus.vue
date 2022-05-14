@@ -45,16 +45,17 @@
     <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
       Natrag na odabir pića
     </button>
+
     <div>
-      <button class="btn btn-dark" style="margin: 1em">Submit</button>
-      <input
-        class="input"
-        type="text"
-        @keydown.enter="handleSearch($event, 'youtube')"
-        placeholder="Upišite svoju ocjenu"
-        :value="youtubelinks[brojilo].url"
-      />
+      <button-group class="text-center">
+        <button class="btn btn-dark">1</button>
+        <button class="btn btn-dark">2</button>
+        <button class="btn btn-dark">3</button>
+        <button class="btn btn-dark">4</button>
+        <button class="btn btn-dark">5</button>
+      </button-group>
     </div>
+    Odaberite ocjenu
   </div>
 </template>
 
