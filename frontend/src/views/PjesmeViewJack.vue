@@ -42,7 +42,6 @@
       Natrag na odabir pića
     </button>
     <div>
-      <button class="btn btn-dark" style="margin: 1em">Submit</button>
       <input
         class="input"
         type="text"
