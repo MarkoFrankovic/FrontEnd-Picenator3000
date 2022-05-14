@@ -38,7 +38,7 @@
       v-model="pice"
     />
     <button
-      v-on:click="posalji()"
+      v-on:click="posalji_opet()"
       type="button"
       class="btn btn-dark"
       style="margin: 1em"
@@ -75,8 +75,8 @@ export default {
     posalji() {
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost:5000/upis");
-      xhr.setRequestHeader("Accept", "application/json");
-      xhr.setRequestHeader("Content-Type", "application/json");
+      //xhr.setRequestHeader("Accept", "text/html");
+      //xhr.setRequestHeader("Content-Type", "text/html");
 
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -92,7 +92,28 @@ export default {
         pice: this.pice,
       };
 
+      console.log(data);
       xhr.send(data);
+    },
+
+    async posalji_opet() {
+      const response = await fetch("http://localhost:5000/upis", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: {
+          ime: this.izvodac_ime_pjesme,
+          url: this.url,
+          ocjena: this.ocjena,
+          pice: this.pice,
+        },
+      });
+
+      response.json().then((data) => {
+        console.log(data);
+      });
     },
 
     natrag() {
