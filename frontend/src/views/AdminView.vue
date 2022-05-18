@@ -75,8 +75,8 @@ export default {
     posalji() {
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost:5000/upis");
-      //xhr.setRequestHeader("Accept", "text/html");
-      //xhr.setRequestHeader("Content-Type", "text/html");
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
 
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -96,27 +96,6 @@ export default {
       xhr.send(JSON.stringify(podatci));
     },
 
-    /*
-    async posalji_opet() {
-      const response = await fetch("http://localhost:5000/upis", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: {
-          ime: this.izvodac_ime_pjesme,
-          url: this.url,
-          ocjena: this.ocjena,
-          pice: this.pice,
-        },
-      });
-
-      response.json().then((data) => {
-        console.log(data);
-      });
-    },
-*/
     natrag() {
       this.$router.push("/");
     },
