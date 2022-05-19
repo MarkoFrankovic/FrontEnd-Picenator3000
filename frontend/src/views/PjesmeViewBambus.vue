@@ -9,7 +9,7 @@
       thumbnail-quality="standard"
     />
     <div>
-      <span>{{ youtubelinks[brojilo].url }}</span>
+      <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
     </div>
 
     <div class="buttons">
@@ -65,7 +65,7 @@
         </button>
       </button-group>
     </div>
-    Odaberite ocjenu
+    <span>Odabrana ocjena je: {{ this.ocjena }}</span>
   </div>
 </template>
 
@@ -81,7 +81,6 @@ export default {
     return {
       youtubelinks: [{ url: "" }],
       brojilo: 0,
-      ocjena_pjesme: 0,
     };
   },
 
