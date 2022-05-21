@@ -9,14 +9,16 @@
       thumbnail-quality="standard"
     />
 
-    <div>
-      <span>Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span>
-    </div>
-    <div>
-      <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
-    </div>
-    <div>
-      <span>Ocjena kompatibilnosti: {{ youtubelinks[brojilo].ocjena }}</span>
+    <div class="card">
+      <div>
+        <span>Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span>
+      </div>
+      <div>
+        <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
+      </div>
+      <div>
+        <span>Ocjena kompatibilnosti: {{ youtubelinks[brojilo].ocjena }}</span>
+      </div>
     </div>
 
     <div class="buttons">
