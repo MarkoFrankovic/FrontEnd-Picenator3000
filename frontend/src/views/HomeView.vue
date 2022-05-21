@@ -50,9 +50,15 @@ export default {
     return {
       ime: "",
       loz: "",
+      podatci: [{ username: "", password: "" }],
     };
   },
-  mounted() {
+  async mounted() {
+    let podatci = await fetch("http://localhost:5000/autentifikacija");
+    let rezultati = await podatci.json();
+    this.commits = rezultati;
+    console.log(rezultati);
+    this.podatci = rezultati;
     if (localStorage.ime) {
       this.ime = localStorage.getItem("ime");
       this.loz = localStorage.getItem("loz");
@@ -61,9 +67,15 @@ export default {
 
   methods: {
     autentifikacija() {
-      if (this.ime == "korisnik" && this.loz == "korisnik") {
+      if (
+        this.ime == this.podatci[0].username &&
+        this.loz == this.podatci[0].password
+      ) {
         this.$router.push("/about");
-      } else if (this.ime == "admin" && this.loz == "admin") {
+      } else if (
+        this.ime == this.podatci[1].username &&
+        this.loz == this.podatci[1].password
+      ) {
         this.$router.push("/admin");
       }
     },

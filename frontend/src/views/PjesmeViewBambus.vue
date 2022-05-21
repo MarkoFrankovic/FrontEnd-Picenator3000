@@ -8,11 +8,15 @@
       aspect-ratio="16:9"
       thumbnail-quality="standard"
     />
+
     <div>
       <span>Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span>
     </div>
     <div>
       <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
+    </div>
+    <div>
+      <span>Ocjena kompatibilnosti: {{ youtubelinks[brojilo].ocjena }}</span>
     </div>
 
     <div class="buttons">
@@ -135,8 +139,10 @@ export default {
       };
 
       console.log(podatci);
+      alert(ocjena);
       xhr.send(JSON.stringify(podatci));
     },
+
     natrag() {
       this.$router.push("/about");
     },
