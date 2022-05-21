@@ -9,6 +9,9 @@
       thumbnail-quality="standard"
     />
     <div>
+      <span>Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span>
+    </div>
+    <div>
       <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
     </div>
 
@@ -65,7 +68,7 @@
         </button>
       </button-group>
     </div>
-    <span>Odabrana ocjena je: {{ this.ocjena }}</span>
+    <span>Odabrana ocjena je: {{}}</span>
   </div>
 </template>
 
@@ -90,7 +93,6 @@ export default {
     this.commits = rezultati;
     console.log(rezultati);
     this.youtubelinks = rezultati;
-    this.ime_pjesme = rezultati;
   },
 
   methods: {
@@ -129,7 +131,7 @@ export default {
 
       let podatci = {
         ocjena: ocjena,
-        url: this.youtubelinks[this.brojilo],
+        url: this.youtubelinks[this.brojilo].url,
       };
 
       console.log(podatci);

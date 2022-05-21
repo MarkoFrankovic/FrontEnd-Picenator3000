@@ -8,6 +8,12 @@
       aspect-ratio="16:9"
       thumbnail-quality="standard"
     />
+    <div>
+      <span>Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span>
+    </div>
+    <div>
+      <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
+    </div>
 
     <div class="buttons">
       <button @click="prev()" class="btn btn-dark" style="margin: 1em">
@@ -42,15 +48,25 @@
       Natrag na odabir pića
     </button>
     <div>
-      <button class="btn btn-dark" style="margin: 1em">Submit</button>
-      <input
-        class="input"
-        type="text"
-        @keydown.enter="handleSearch($event, 'youtube')"
-        placeholder="Upišite svoju ocjenu"
-        :value="youtubelinks[brojilo].url"
-      />
+      <button-group class="text-center">
+        <button class="btn btn-dark" @click="posalji(1)" style="margin: 1em">
+          1
+        </button>
+        <button class="btn btn-dark" @click="posalji(2)" style="margin: 1em">
+          2
+        </button>
+        <button class="btn btn-dark" @click="posalji(3)" style="margin: 1em">
+          3
+        </button>
+        <button class="btn btn-dark" @click="posalji(4)" style="margin: 1em">
+          4
+        </button>
+        <button class="btn btn-dark" @click="posalji(5)" style="margin: 1em">
+          5
+        </button>
+      </button-group>
     </div>
+    <span>Odabrana ocjena je: {{}}</span>
   </div>
 </template>
 
@@ -64,20 +80,16 @@ export default {
   },
   data() {
     return {
-      //youtubeLink: "https://www.youtube.com/watch?v=vco21gmOPiY",
       youtubelinks: [{ url: "" }],
       brojilo: 0,
     };
   },
 
   async mounted() {
-    // this.$refs['lazyVideo'].playVideo();
-
     let podatci = await fetch("http://localhost:5000/vodka");
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
-    //this.youtubeLink = rezultati[2].url;
     this.youtubelinks = rezultati;
   },
   methods: {
@@ -99,6 +111,27 @@ export default {
 
     handleClick(event, ref) {
       this.$refs[ref][event]();
+    },
+    posalji(ocjena) {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://localhost:5000/izmjena_vodka");
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.responseText);
+        }
+      };
+
+      let podatci = {
+        ocjena: ocjena,
+        url: this.youtubelinks[this.brojilo].url,
+      };
+
+      console.log(podatci);
+      xhr.send(JSON.stringify(podatci));
     },
     natrag() {
       this.$router.push("/about");
