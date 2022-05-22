@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <h1>Piće: Jack s ledom</h1>
+    <div class="col d-flex justify-content-center" style="margin: 0.2em">
+      <div class="card">
+        <h1>Piće: Jack s ledom</h1>
+      </div>
+    </div>
+
     <LazyYoutube
       ref="youtubeLazyVideo"
       :src="youtubelinks[brojilo].url"
@@ -8,65 +13,108 @@
       aspect-ratio="16:9"
       thumbnail-quality="standard"
     />
-    <div>
-      <span>Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span>
-    </div>
-    <div>
-      <span>Alterrnativni link: {{ youtubelinks[brojilo].url }}</span>
+
+    <div class="col d-flex justify-content-center">
+      <div class="card">
+        <div>
+          <div>
+            <span class="text-center" style="margin: 1em"
+              >Ime pjesme i izvođač: {{ youtubelinks[brojilo].ime }}</span
+            >
+          </div>
+          <div>
+            <span class="text-center" style="margin: 1em"
+              >Alterrnativni link: {{ youtubelinks[brojilo].url }}</span
+            >
+          </div>
+          <div>
+            <span class="text-center" style="margin: 1em"
+              >Ocjena kompatibilnosti: {{ youtubelinks[brojilo].ocjena }}</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="buttons">
-      <button @click="prev()" class="btn btn-dark" style="margin: 1em">
-        Prev
-      </button>
-      <button
-        @click="handleClick('playVideo', 'youtubeLazyVideo')"
-        class="btn btn-success"
-        style="margin: 1em"
-      >
-        Play
-      </button>
-      <button
-        @click="handleClick('stopVideo', 'youtubeLazyVideo')"
-        class="btn btn-danger"
-        style="margin: 1em"
-      >
-        Stop
-      </button>
-      <button
-        @click="handleClick('pauseVideo', 'youtubeLazyVideo')"
-        class="btn btn-warning"
-        style="margin: 1em"
-      >
-        Pause
-      </button>
-      <button @click="next()" class="btn btn-dark" style="margin: 1em">
-        Next
-      </button>
+    <div class="col d-flex justify-content-center">
+      <div class="card">
+        <div class="buttons">
+          <button @click="prev()" class="btn btn-dark" style="margin: 1em">
+            Prev
+          </button>
+          <button
+            @click="handleClick('playVideo', 'youtubeLazyVideo')"
+            class="btn btn-success"
+            style="margin: 1em"
+          >
+            Play
+          </button>
+          <button
+            @click="handleClick('stopVideo', 'youtubeLazyVideo')"
+            class="btn btn-danger"
+            style="margin: 1em"
+          >
+            Stop
+          </button>
+          <button
+            @click="handleClick('pauseVideo', 'youtubeLazyVideo')"
+            class="btn btn-warning"
+            style="margin: 1em"
+          >
+            Pause
+          </button>
+          <button @click="next()" class="btn btn-dark" style="margin: 1em">
+            Next
+          </button>
+        </div>
+      </div>
     </div>
-    <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
+
+    <div class="col d-flex justify-content-center">
+      <div class="card">
+        Ocjenite pjesmu:
+        <button-group class="text-center">
+          <button
+            class="btn btn-dark"
+            @click="posalji(1)"
+            style="margin: 0.2em"
+          >
+            1
+          </button>
+          <button
+            class="btn btn-dark"
+            @click="posalji(2)"
+            style="margin: 0.2em"
+          >
+            2
+          </button>
+          <button
+            class="btn btn-dark"
+            @click="posalji(3)"
+            style="margin: 0.2em"
+          >
+            3
+          </button>
+          <button
+            class="btn btn-dark"
+            @click="posalji(4)"
+            style="margin: 0.2em"
+          >
+            4
+          </button>
+          <button
+            class="btn btn-dark"
+            @click="posalji(5)"
+            style="margin: 0.2em"
+          >
+            5
+          </button>
+        </button-group>
+      </div>
+    </div>
+    <button v-on:click="natrag" class="btn btn-primary" style="margin: 0.2em">
       Natrag na odabir pića
     </button>
-    <div>
-      <button-group class="text-center">
-        <button class="btn btn-dark" @click="posalji(1)" style="margin: 1em">
-          1
-        </button>
-        <button class="btn btn-dark" @click="posalji(2)" style="margin: 1em">
-          2
-        </button>
-        <button class="btn btn-dark" @click="posalji(3)" style="margin: 1em">
-          3
-        </button>
-        <button class="btn btn-dark" @click="posalji(4)" style="margin: 1em">
-          4
-        </button>
-        <button class="btn btn-dark" @click="posalji(5)" style="margin: 1em">
-          5
-        </button>
-      </button-group>
-    </div>
-    <span>Odabrana ocjena je: {{}}</span>
   </div>
 </template>
 
