@@ -97,7 +97,7 @@ export default {
     },
 
     natrag() {
-      this.$router.push("/");
+      this.$router.push("/login");
     },
   },
 };

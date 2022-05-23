@@ -1,47 +1,48 @@
 <template>
-  <div class="signup">
-    <h1>Prijava</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Korisničko ime</label>
-              <input
-                type="username"
-                class="form-control"
-                aria-describedby="emailHelp"
-                placeholder="Upiši korisničko ime"
-                v-model="ime"
-              />
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Lozinka</label>
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-                v-model="loz"
-              />
-              <small id="emailHelp" class="form-text text-muted"
-                >Nemojte djeliti svoje podatke s drugima</small
+  <a>
+    <div class="signup">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm"></div>
+          <div class="col-sm">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Korisničko ime</label>
+                <input
+                  type="username"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  placeholder="Upiši korisničko ime"
+                  v-model="ime"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Lozinka</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  v-model="loz"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >Nemojte djeliti svoje podatke s drugima</small
+                >
+              </div>
+              <button
+                @click="autentifikacija()"
+                type="button"
+                class="btn btn-dark"
+                style="margin: 1em"
               >
-            </div>
-            <button
-              @click="autentifikacija()"
-              type="button"
-              class="btn btn-primary"
-              style="margin: 1em"
-            >
-              Submit
-            </button>
-          </form>
+                Submit
+              </button>
+            </form>
+          </div>
+          <div class="col-sm"></div>
         </div>
-        <div class="col-sm"></div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -82,3 +83,16 @@ export default {
   },
 };
 </script>
+
+<style>
+body,
+a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+</style>
