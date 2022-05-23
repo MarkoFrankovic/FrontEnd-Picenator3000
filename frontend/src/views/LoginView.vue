@@ -85,7 +85,6 @@ export default {
 </script>
 
 <style>
-body,
 a {
   position: absolute;
   top: 0;

@@ -93,12 +93,6 @@ i {
   right: 0;
 }
 
-body,
-html {
-  min-height: 100%;
-  min-width: 100%;
-}
-
 .bgimg {
   background-image: url("@/assets/img/thumbnail.jpg");
   background-position: center;
@@ -106,5 +100,11 @@ html {
   background-position: center center;
   width: 2000px;
   height: 950px;
+}
+
+body,
+html {
+  min-height: 100%;
+  min-width: 100%;
 }
 </style>
