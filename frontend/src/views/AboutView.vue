@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Pičentaor3000</h1>
     <div>
       <div class="col d-flex justify-content-center" style="margin: 0.2em">
         <div>
@@ -24,7 +23,7 @@
                   <button
                     v-on:click="bambus"
                     type="button"
-                    class="btn btn-outline-primary"
+                    class="btn btn-outline-dark"
                     style="width: 6rem"
                   >
                     Bambus
@@ -52,7 +51,7 @@
                   <button
                     v-on:click="jaeger"
                     type="button"
-                    class="btn btn-outline-primary"
+                    class="btn btn-outline-dark"
                     style="width: 6rem"
                   >
                     Jäger Cola
@@ -80,7 +79,7 @@
                   <button
                     v-on:click="gin"
                     type="button"
-                    class="btn btn-outline-primary"
+                    class="btn btn-outline-dark"
                     style="width: 6rem"
                   >
                     Gin Tonic
@@ -114,7 +113,7 @@
                     <button
                       v-on:click="jack"
                       type="button"
-                      class="btn btn-outline-primary"
+                      class="btn btn-outline-dark"
                       style="width: 6rem"
                     >
                       Jack s ledom
@@ -142,7 +141,7 @@
                     <button
                       v-on:click="merlot"
                       type="button"
-                      class="btn btn-outline-primary"
+                      class="btn btn-outline-dark"
                       style="width: 6rem"
                     >
                       Merlot
@@ -170,7 +169,7 @@
                     <button
                       v-on:click="stock"
                       type="button"
-                      class="btn btn-outline-primary"
+                      class="btn btn-outline-dark"
                       style="width: 6rem"
                     >
                       Stock Cola
@@ -205,7 +204,7 @@
                   <button
                     v-on:click="travarica"
                     type="button"
-                    class="btn btn-outline-primary"
+                    class="btn btn-outline-dark"
                     style="width: 6rem"
                   >
                     Travarica
@@ -233,7 +232,7 @@
                   <button
                     v-on:click="voda"
                     type="button"
-                    class="btn btn-outline-primary"
+                    class="btn btn-outline-dark"
                     style="width: 6rem"
                   >
                     Voda
@@ -261,7 +260,7 @@
                   <button
                     v-on:click="vodka"
                     type="button"
-                    class="btn btn-outline-primary"
+                    class="btn btn-outline-dark"
                     style="width: 6rem"
                   >
                     Vodka Juice
@@ -275,7 +274,7 @@
     </div>
 
     <div class="col d-flex justify-content-center" style="margin: 0.2em">
-      <button v-on:click="natrag" class="btn btn-primary" style="margin: 1em">
+      <button v-on:click="natrag" class="btn btn-dark" style="margin: 1em">
         Natrag na login
       </button>
     </div>
