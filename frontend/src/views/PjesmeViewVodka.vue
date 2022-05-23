@@ -112,7 +112,7 @@
         </button-group>
       </div>
     </div>
-    <button v-on:click="natrag" class="btn btn-primary" style="margin: 0.2em">
+    <button v-on:click="natrag" class="btn btn-dark" style="margin: 0.2em">
       Natrag na odabir pića
     </button>
   </div>
