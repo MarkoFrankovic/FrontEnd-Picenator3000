@@ -41,7 +41,7 @@ export default {
 <style>
 body,
 h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", gelve;
   color: whitesmoke;
   outline-color: grey;
   width: 1000px;
