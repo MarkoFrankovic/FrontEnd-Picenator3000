@@ -47,8 +47,7 @@ h1 {
   outline-color: grey;
   width: 1000px;
   height: 100px;
-
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -61,8 +60,7 @@ hr {
   color: whitesmoke;
   outline-color: grey;
   width: 50%;
-
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -74,7 +72,7 @@ p {
   font-family: "Raleway", sans-serif;
   color: whitesmoke;
   outline-color: grey;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -87,24 +85,26 @@ i {
   font-family: "Raleway", sans-serif;
   color: whitesmoke;
   outline-color: grey;
-  position: absolute;
+  position: fixed;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-.bgimg {
-  background-image: url("@/assets/img/thumbnail.jpg");
-  background-position: center;
-  background-size: cover;
-  background-position: center center;
-  width: 2000px;
-  height: 950px;
+  margin: auto;
+  text-align: center;
 }
 
 body,
 html {
   min-height: 100%;
   min-width: 100%;
+}
+.bgimg {
+  background-image: url("@/assets/img/thumbnail.jpg");
+  background-position: center;
+  background-size: auto;
+  background-position: center center;
+  width: 3000px;
+  height: 950px;
 }
 </style>
