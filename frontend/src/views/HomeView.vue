@@ -40,6 +40,12 @@ export default {
 
 <style>
 body,
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   font-family: "Raleway", gelve;
   color: whitesmoke;
