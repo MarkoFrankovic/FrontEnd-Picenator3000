@@ -46,7 +46,7 @@
     </button>
     <div>
       <button v-on:click="natrag" class="btn btn-dark" style="margin: 1em">
-        Natrag na login
+        Natrag
       </button>
     </div>
   </div>
