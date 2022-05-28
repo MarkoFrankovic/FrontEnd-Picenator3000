@@ -178,6 +178,7 @@ export default {
       };
 
       console.log(podatci);
+      alert("Odabrana ocjena je: " + ocjena);
       xhr.send(JSON.stringify(podatci));
     },
     natrag() {

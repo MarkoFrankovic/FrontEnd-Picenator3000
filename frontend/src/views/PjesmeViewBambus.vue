@@ -181,7 +181,7 @@ export default {
       };
 
       console.log(podatci);
-      alert(ocjena);
+      alert("Odabrana ocjena je: " + ocjena);
       xhr.send(JSON.stringify(podatci));
     },
 
