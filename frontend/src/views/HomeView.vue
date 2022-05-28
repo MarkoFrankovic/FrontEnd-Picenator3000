@@ -105,8 +105,5 @@ html {
 }
 a {
   background-image: url("@/assets/img/thumbnail.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
 }
 </style>

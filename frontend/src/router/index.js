@@ -31,12 +31,6 @@ const routes = [
   },
 
   {
-    path: '/player',
-    name: 'player',
-    component: () => import(/* webpackChunkName: "player" */ '../views/AudioPlayer.vue')
-  },
-
-  {
     path: '/pjesmebambus',
     name: 'pjesmebambus',
     component: () => import(/* webpackChunkName: "pjesmebambus" */ '../views/PjesmeViewBambus.vue')
