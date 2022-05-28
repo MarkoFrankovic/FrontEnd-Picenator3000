@@ -275,7 +275,7 @@
 
     <div class="col d-flex justify-content-center" style="margin: 0.2em">
       <button v-on:click="natrag" class="btn btn-dark" style="margin: 1em">
-        Natrag na login
+        Natrag
       </button>
     </div>
   </div>

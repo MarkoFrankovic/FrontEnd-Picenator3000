@@ -13,12 +13,21 @@
           <i>
             <div class="col d-flex justify-content-center">
               <button
+                v-on:click="korisnik"
+                type="button"
+                class="btn btn-outline-light"
+                style="margin: 0.5em"
+              >
+                Pičenator
+              </button>
+
+              <button
                 v-on:click="login"
                 type="button"
                 class="btn btn-outline-light"
                 style="margin: 0.5em"
               >
-                Prijava
+                Admin
               </button>
             </div>
           </i>
@@ -33,6 +42,9 @@ export default {
   methods: {
     login() {
       this.$router.push("/login");
+    },
+    korisnik() {
+      this.$router.push("/about");
     },
   },
 };

@@ -72,11 +72,6 @@ export default {
         this.ime == this.podatci[0].username &&
         this.loz == this.podatci[0].password
       ) {
-        this.$router.push("/about");
-      } else if (
-        this.ime == this.podatci[1].username &&
-        this.loz == this.podatci[1].password
-      ) {
         this.$router.push("/admin");
       }
     },
