@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="centered">
-      <div class="col d-flex justify-content-center">
+      <a>
         <div
           class="bgimg w3-display-container w3-animate-opacity w3-text-white"
         >
@@ -32,7 +32,7 @@
             </div>
           </i>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -103,13 +103,10 @@ html {
   min-height: 100%;
   min-width: 100%;
 }
-.bgimg {
+a {
   background-image: url("@/assets/img/thumbnail.jpg");
   background-position: center;
-  background-size: 1000px;
-  background-position: center center;
   background-repeat: no-repeat;
-  width: 950px;
-  height: 950px;
+  background-size: auto;
 }
 </style>
