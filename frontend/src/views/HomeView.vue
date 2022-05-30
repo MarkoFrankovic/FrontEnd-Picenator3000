@@ -63,7 +63,7 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", inter;
   color: whitesmoke;
   outline-color: rgb(92, 92, 92);
   height: 0.1px;
