@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     
-
     <LazyYoutube
       ref="youtubeLazyVideo"
       :src="youtubelinks[brojilo].url"
