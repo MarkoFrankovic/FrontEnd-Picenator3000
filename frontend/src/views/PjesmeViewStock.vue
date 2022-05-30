@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div class="col d-flex justify-content-center" style="margin: 0.2em">
-      <div class="card">
-        <h1>Piće: Stock - Colla</h1>
-      </div>
-    </div>
+    
 
     <LazyYoutube
       ref="youtubeLazyVideo"
