@@ -1,40 +1,36 @@
 <template>
-  <body>
-    <div class="container">
-      <div class="centered">
-        <div
-          class="bgimg w3-display-container w3-animate-opacity w3-text-white"
-        >
-          <div class="w3-display-middle">
-            <h1 class="w3-jumbo w3-animate-top">Pičenator 3000</h1>
-            <hr class="w3-border-grey" style="margin: auto; width: 20%" />
-          </div>
-
-          <i>
-            <div class="col d-flex justify-content-center">
-              <button
-                v-on:click="korisnik"
-                type="button"
-                class="btn btn-outline-light"
-                style="margin: 0.5em"
-              >
-                Pičenator
-              </button>
-
-              <button
-                v-on:click="login"
-                type="button"
-                class="btn btn-outline-light"
-                style="margin: 0.5em"
-              >
-                Admin
-              </button>
-            </div>
-          </i>
+  <div class="container">
+    <div class="centered">
+      <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-middle">
+          <h1 class="w3-jumbo w3-animate-top">Pičenator 3000</h1>
+          <hr class="w3-border-grey" style="margin: auto; width: 20%" />
         </div>
+
+        <i>
+          <div class="col d-flex justify-content-center">
+            <button
+              v-on:click="korisnik"
+              type="button"
+              class="btn btn-outline-light"
+              style="margin: 0.5em"
+            >
+              Pičenator
+            </button>
+
+            <button
+              v-on:click="login"
+              type="button"
+              class="btn btn-outline-light"
+              style="margin: 0.5em"
+            >
+              Admin
+            </button>
+          </div>
+        </i>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>
