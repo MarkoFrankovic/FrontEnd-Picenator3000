@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <div class="centered">
-      <a>
+  <body>
+    <div class="container">
+      <div class="centered">
         <div
           class="bgimg w3-display-container w3-animate-opacity w3-text-white"
         >
@@ -32,13 +32,19 @@
             </div>
           </i>
         </div>
-      </a>
+      </div>
     </div>
-  </div>
+  </body>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      brojilo: 0,
+    };
+  },
+
   methods: {
     login() {
       this.$router.push("/admin");
@@ -61,7 +67,7 @@ body,
 h1 {
   font-family: "Raleway", gelve;
   color: whitesmoke;
-  outline-color: grey;
+  outline-color: rgb(92, 92, 92);
   width: 1000px;
   height: 100px;
   position: fixed;
@@ -75,7 +81,7 @@ h1 {
 
 hr {
   color: whitesmoke;
-  outline-color: grey;
+  outline-color: rgb(92, 92, 92);
   width: 50%;
   position: fixed;
   top: 0;
@@ -88,7 +94,7 @@ hr {
 i {
   font-family: "Raleway", sans-serif;
   color: whitesmoke;
-  outline-color: grey;
+  outline-color: rgb(92, 92, 92);
   height: 0.1px;
   position: fixed;
   top: 0;
@@ -103,7 +109,12 @@ html {
   min-height: 100%;
   min-width: 100%;
 }
-a {
+
+body {
   background-image: url("@/assets/img/thumbnail.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
 }
 </style>
