@@ -23,7 +23,7 @@
               class="btn btn-outline-light"
               style="margin: 0.5em"
             >
-              Admin
+              Upis
             </button>
           </div>
         </i>
