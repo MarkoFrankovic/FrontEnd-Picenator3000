@@ -288,8 +288,17 @@ export default {
       pice: "",
     };
   },
+
+  mounted() {
+    if (localStorage.pice) {
+      this.pice = localStorage.pice;
+    }
+  },
+
   methods: {
     biranje(pice) {
+      this.pice = localStorage.pice;
+      console.log(localStorage.pice);
       this.$router.push(pice);
     },
   },

@@ -127,7 +127,9 @@ export default {
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/bambus");
+    let podatci = await fetch(
+      "http://localhost:5000/getanje/" + localStorage.pice
+    );
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
@@ -171,7 +173,7 @@ export default {
       let podatci = {
         ocjena: ocjena,
         url: this.youtubelinks[this.brojilo].url,
-        pice: "Bambus",
+        pice: "",
       };
 
       console.log(podatci);
