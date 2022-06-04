@@ -111,7 +111,6 @@
     </button>
   </div>
 </template>
-
 <script>
 import { LazyYoutube } from "vue-lazytube";
 
@@ -128,12 +127,13 @@ export default {
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/getanje/vodka");
+    let podatci = await fetch("http://localhost:5000/bambus");
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
     this.youtubelinks = rezultati;
   },
+
   methods: {
     prev() {
       if (this.brojilo == 0) {
@@ -154,6 +154,7 @@ export default {
     handleClick(event, ref) {
       this.$refs[ref][event]();
     },
+
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost:5000/izmjena");
@@ -170,13 +171,14 @@ export default {
       let podatci = {
         ocjena: ocjena,
         url: this.youtubelinks[this.brojilo].url,
-        pice: "Vodka",
+        pice: "Bambus",
       };
 
       console.log(podatci);
       alert("Odabrana ocjena je: " + ocjena);
       xhr.send(JSON.stringify(podatci));
     },
+
     natrag() {
       this.$router.push("/about");
     },

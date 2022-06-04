@@ -283,6 +283,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      piće: "",
+    };
+  },
   methods: {
     bambus() {
       this.$router.push("/pjesmebambus");

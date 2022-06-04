@@ -128,7 +128,7 @@ export default {
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/travarica");
+    let podatci = await fetch("http://localhost:5000/getanje/travarica");
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
