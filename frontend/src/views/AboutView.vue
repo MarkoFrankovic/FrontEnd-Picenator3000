@@ -21,7 +21,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="bambus"
+                    v-on:click="biranje('/pjesmebambus')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -49,7 +49,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="jaeger"
+                    v-on:click="biranje('/pjesmejaeger')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -77,7 +77,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="gin"
+                    v-on:click="biranje('/pjesmegin')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -111,7 +111,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="jack"
+                      v-on:click="biranje('/pjesmejack')"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -139,7 +139,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="merlot"
+                      v-on:click="biranje('/pjesmemerlot')"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -167,7 +167,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="stock"
+                      v-on:click="biranje('/pjesmestock')"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -202,7 +202,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="travarica"
+                    v-on:click="biranje('/pjesmetravarica')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -230,7 +230,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="voda"
+                    v-on:click="biranje('/pjesmevoda')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -258,7 +258,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="vodka"
+                    v-on:click="biranje('/pjesmevodka')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -285,39 +285,12 @@
 export default {
   data() {
     return {
-      piće: "",
+      pice: "",
     };
   },
   methods: {
-    bambus() {
-      this.$router.push("/pjesmebambus");
-    },
-    jaeger() {
-      this.$router.push("/pjesmejaeger");
-    },
-    gin() {
-      this.$router.push("/pjesmegin");
-    },
-    jack() {
-      this.$router.push("/pjesmejack");
-    },
-    merlot() {
-      this.$router.push("/pjesmemerlot");
-    },
-    stock() {
-      this.$router.push("/pjesmestock");
-    },
-    travarica() {
-      this.$router.push("/pjesmetravarica");
-    },
-    voda() {
-      this.$router.push("/pjesmevoda");
-    },
-    vodka() {
-      this.$router.push("/pjesmevodka");
-    },
-    natrag() {
-      this.$router.push("/");
+    biranje(pice) {
+      this.$router.push(pice);
     },
   },
 };

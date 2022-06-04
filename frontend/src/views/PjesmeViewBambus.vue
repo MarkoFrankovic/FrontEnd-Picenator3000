@@ -158,7 +158,7 @@ export default {
 
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:5000/izmjena");
+      xhr.open("PATCH", "http://localhost:5000/izmjena");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
