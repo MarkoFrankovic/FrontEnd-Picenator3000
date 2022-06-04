@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    
-
     <LazyYoutube
       ref="youtubeLazyVideo"
       :src="youtubelinks[brojilo].url"
@@ -172,6 +170,7 @@ export default {
       let podatci = {
         ocjena: ocjena,
         url: this.youtubelinks[this.brojilo].url,
+        pice: "Stock",
       };
 
       console.log(podatci);
