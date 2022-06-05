@@ -297,8 +297,6 @@ export default {
 
   methods: {
     biranje(pice) {
-      this.pice = localStorage.pice;
-      console.log(localStorage.pice);
       this.$router.push(pice);
     },
   },

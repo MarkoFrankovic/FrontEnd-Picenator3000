@@ -123,10 +123,13 @@ export default {
     return {
       youtubelinks: [{ url: "" }],
       brojilo: 0,
+      pice: "",
     };
   },
 
   async mounted() {
+    this.pice = localStorage.getItem();
+    console.log(this.pice);
     let podatci = await fetch(
       "http://localhost:5000/getanje/" + localStorage.pice
     );
