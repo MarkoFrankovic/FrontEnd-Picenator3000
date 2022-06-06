@@ -3,13 +3,6 @@
     <div>
       <div class="col d-flex justify-content-center" style="margin: 0.2em">
         <div>
-          <router-link
-            :to="{
-              name: 'details',
-              params: { isbn: book.isbn, url: book.url },
-            }"
-            >{{ book.name }}</router-link
-          >
           <button-group class="col d-flex justify-content-center">
             <div
               class="col d-flex justify-content-center"
