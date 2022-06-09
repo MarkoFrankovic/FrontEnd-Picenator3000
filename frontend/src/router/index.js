@@ -32,6 +32,12 @@ const routes = [
   },
 
   {
+    path: '/komentari',
+    name: 'komentari',
+    component: () => import(/* webpackChunkName: "komentari" */ '../views/KomentariView.vue')
+  },
+
+  {
     path: '/pjesmebambus',
     name: 'pjesmebambus',
     component: () => import(/* webpackChunkName: "pjesmebambus" */ '../views/PjesmeViewBambus.vue')

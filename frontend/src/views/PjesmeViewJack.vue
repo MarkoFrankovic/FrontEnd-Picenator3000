@@ -104,6 +104,23 @@
             5
           </button>
         </button-group>
+        Dodajte komentar
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+          v-model="komentar"
+        />
+
+        <button
+          class="btn btn-dark"
+          @click="posalji_komentar"
+          style="margin: 0.2em"
+        >
+          Pošalji komentar
+        </button>
       </div>
     </div>
     <button v-on:click="natrag" class="btn btn-dark" style="margin: 0.2em">
@@ -177,6 +194,32 @@ export default {
       alert("Odabrana ocjena je: " + ocjena);
       xhr.send(JSON.stringify(podatci));
     },
+
+    posalji_komentar() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://localhost:5000/upis_komentara");
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.responseText);
+        }
+      };
+
+      let podatci = {
+        komentar: this.komentar,
+        ime: this.youtubelinks[this.brojilo].ime,
+        url: this.youtubelinks[this.brojilo].url,
+        pice: "Jack",
+      };
+
+      console.log(podatci);
+      alert("Vaš komentar je zabilježen.");
+      xhr.send(JSON.stringify(podatci));
+    },
+
     natrag() {
       this.$router.push("/about");
     },
