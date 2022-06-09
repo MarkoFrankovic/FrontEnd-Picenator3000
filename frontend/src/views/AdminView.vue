@@ -43,12 +43,42 @@
         class="btn btn-dark"
         style="margin: 1em"
       >
-        Submit
+        Upiši
       </button>
-      <div>
-        <button v-on:click="natrag" class="btn btn-dark" style="margin: 1em">
-          Natrag
+
+      <div class="container">
+        <span class="input-group-text">Izvođač i ime pjesme:</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+          v-model="izvodac_ime_pjesme"
+        />
+
+        <span class="input-group-text">Piće:</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+          v-model="pice"
+        />
+        <button
+          v-on:click="izbrisi()"
+          type="button"
+          class="btn btn-dark"
+          style="margin: 1em"
+        >
+          Izbriši
         </button>
+        <div>
+          <button v-on:click="natrag" class="btn btn-dark" style="margin: 1em">
+            Natrag
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -76,6 +106,30 @@ export default {
     posalji() {
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost:5000/upis");
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log(xhr.status);
+          console.log(xhr.responseText);
+        }
+      };
+
+      let podatci = {
+        ime: this.izvodac_ime_pjesme,
+        url: this.url,
+        ocjena: this.ocjena,
+        pice: this.pice,
+      };
+
+      console.log(podatci);
+      xhr.send(JSON.stringify(podatci));
+    },
+
+    izbrisi() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("DELETE", "http://localhost:5000/delete");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
