@@ -299,6 +299,9 @@ export default {
     biranje(pice) {
       this.$router.push(pice);
     },
+    natrag() {
+      this.$router.push("/");
+    },
   },
 };
 </script>
