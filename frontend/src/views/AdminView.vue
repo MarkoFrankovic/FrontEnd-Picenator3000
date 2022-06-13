@@ -124,6 +124,7 @@ export default {
       };
 
       console.log(podatci);
+      alert("Vaša pjesma je upisana u databazu");
       xhr.send(JSON.stringify(podatci));
     },
 
@@ -148,6 +149,7 @@ export default {
       };
 
       console.log(podatci);
+      alert("Uspješno ste obrisali iz databaze");
       xhr.send(JSON.stringify(podatci));
     },
 
