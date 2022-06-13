@@ -26,12 +26,6 @@ const routes = [
   },
 
   {
-    path: '/korisnik',
-    name: 'korisnik',
-    component: () => import(/* webpackChunkName: "korisnik" */ '../views/KorisnikView.vue')
-  },
-
-  {
     path: '/komentari',
     name: 'komentari',
     component: () => import(/* webpackChunkName: "komentari" */ '../views/KomentariView.vue')
