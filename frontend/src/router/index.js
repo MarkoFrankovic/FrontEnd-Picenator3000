@@ -25,11 +25,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "admin" */ '../views/AdminView.vue')
   },
 
-  {
-    path: '/komentari',
-    name: 'komentari',
-    component: () => import(/* webpackChunkName: "komentari" */ '../views/KomentariView.vue')
-  },
 
   {
     path: '/pjesmebambus',
