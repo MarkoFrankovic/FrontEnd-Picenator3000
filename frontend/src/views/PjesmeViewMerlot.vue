@@ -145,7 +145,9 @@ export default {
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/getanje/merlot");
+    let podatci = await fetch(
+      "https://picenator3000.herokuapp.com/getanje/merlot"
+    );
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
@@ -173,7 +175,7 @@ export default {
     },
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
-      xhr.open("PATCH", "http://localhost:5000/izmjena");
+      xhr.open("PATCH", "https://picenator3000.herokuapp.com/izmjena");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -197,7 +199,7 @@ export default {
 
     posalji_komentar() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:5000/upis_komentara");
+      xhr.open("POST", "https://picenator3000.herokuapp.com/upis_komentara");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
