@@ -21,7 +21,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/pjesmebambus')"
+                    v-on:click="biranje('/korisnik')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -49,7 +49,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/pjesmejaeger')"
+                    v-on:click="biranje('/korisnik')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -77,7 +77,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/pjesmegin')"
+                    v-on:click="biranje('/korisnik')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -111,7 +111,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="biranje('/pjesmejack')"
+                      v-on:click="biranje('/korisnik')"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -139,7 +139,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="biranje('/pjesmemerlot')"
+                      v-on:click="biranje('/korisnik')"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -167,7 +167,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="biranje('/pjesmestock')"
+                      v-on:click="biranje('/korisnik')"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -202,7 +202,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/pjesmetravarica')"
+                    v-on:click="biranje('/korisnik')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -230,7 +230,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/pjesmevoda')"
+                    v-on:click="biranje('/korisnik')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -258,7 +258,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/pjesmevodka')"
+                    v-on:click="biranje('/korisnik')"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -293,6 +293,7 @@ export default {
     if (localStorage.pice) {
       this.pice = localStorage.pice;
     }
+    console.log(this.pice);
   },
 
   methods: {
