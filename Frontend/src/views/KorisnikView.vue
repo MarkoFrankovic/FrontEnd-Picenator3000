@@ -147,7 +147,7 @@ export default {
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/getanje");
+    let podatci = await fetch("http://localhost:5000/pjesme");
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
