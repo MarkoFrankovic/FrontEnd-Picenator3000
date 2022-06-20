@@ -142,16 +142,19 @@ export default {
       youtubelinks: [{ url: "" }],
       brojilo: 0,
       komentar: "",
+      pice: "",
     };
   },
 
   async mounted() {
-    let podatci = await fetch("https://localhost:5000//getanje/");
+    let podatci = await fetch("http://localhost:5000/getanje");
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
     this.youtubelinks = rezultati;
     this.komentar = localStorage.getItem("komentar");
+    this.pice = localStorage.getItem("pice");
+    console.log(this.pice);
   },
 
   methods: {
@@ -177,7 +180,7 @@ export default {
 
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
-      xhr.open("PATCH", "https://picenator3000.herokuapp.com//izmjena");
+      xhr.open("PATCH", "http://localhost:5000/izmjena");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -201,7 +204,7 @@ export default {
 
     posalji_komentar() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://picenator3000.herokuapp.com//upis_komentara");
+      xhr.open("POST", "http://localhost:5000/upis_komentara");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 

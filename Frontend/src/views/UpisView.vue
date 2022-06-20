@@ -105,7 +105,7 @@ export default {
   methods: {
     posalji() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://picenator3000.herokuapp.com/upis");
+      xhr.open("POST", "http://localhost:5000/getanje/upis");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -130,7 +130,7 @@ export default {
 
     izbrisi() {
       let xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "https://picenator3000.herokuapp.com/delete");
+      xhr.open("DELETE", "http://localhost:5000/getanje/delete");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 

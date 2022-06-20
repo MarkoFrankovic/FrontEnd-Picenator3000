@@ -21,7 +21,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/korisnik')"
+                    v-on:click="biranje(Bambus)"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -49,7 +49,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/korisnik')"
+                    v-on:click="biranje(Jaeger)"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -77,7 +77,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/korisnik')"
+                    v-on:click="biranje(Gin)"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -111,7 +111,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="biranje('/korisnik')"
+                      v-on:click="biranje(Jack)"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -139,7 +139,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="biranje('/korisnik')"
+                      v-on:click="biranje(Merlot)"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -167,7 +167,7 @@
                     style="margin: 0.2em"
                   >
                     <button
-                      v-on:click="biranje('/korisnik')"
+                      v-on:click="biranje(Stock)"
                       type="button"
                       class="btn btn-outline-dark"
                       style="width: 6rem"
@@ -202,7 +202,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/korisnik')"
+                    v-on:click="biranje(Travarica)"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -230,7 +230,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/korisnik')"
+                    v-on:click="biranje(Voda)"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -258,7 +258,7 @@
                   style="margin: 0.2em"
                 >
                   <button
-                    v-on:click="biranje('/korisnik')"
+                    v-on:click="biranje(Vodka)"
                     type="button"
                     class="btn btn-outline-dark"
                     style="width: 6rem"
@@ -289,16 +289,11 @@ export default {
     };
   },
 
-  mounted() {
-    if (localStorage.pice) {
-      this.pice = localStorage.pice;
-    }
-    console.log(this.pice);
-  },
+  mounted() {},
 
   methods: {
-    biranje(pice) {
-      this.$router.push(pice);
+    biranje() {
+      this.$router.push("/korisnik");
     },
     natrag() {
       this.$router.push("/");
