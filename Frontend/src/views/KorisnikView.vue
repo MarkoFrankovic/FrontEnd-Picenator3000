@@ -147,14 +147,14 @@ export default {
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/pjesme");
+    this.pice = localStorage.getItem("pice");
+    console.log(this.pice);
+    let podatci = await fetch("http://localhost:5000/pjesme/" + this.pice);
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
     this.youtubelinks = rezultati;
     this.komentar = localStorage.getItem("komentar");
-    this.pice = localStorage.getItem("pice");
-    console.log(this.pice);
   },
 
   methods: {
@@ -180,7 +180,7 @@ export default {
 
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
-      xhr.open("PATCH", "http://localhost:5000/izmjena");
+      xhr.open("PATCH", "http://localhost:5000/pjesme");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -194,7 +194,7 @@ export default {
       let podatci = {
         ocjena: ocjena,
         url: this.youtubelinks[this.brojilo].url,
-        pice: "Bambus",
+        pice: this.pice,
       };
 
       console.log(podatci);
@@ -219,7 +219,7 @@ export default {
         komentar: this.komentar,
         ime: this.youtubelinks[this.brojilo].ime,
         url: this.youtubelinks[this.brojilo].url,
-        pice: "Bambus",
+        pice: this.pice,
       };
 
       console.log(podatci);
