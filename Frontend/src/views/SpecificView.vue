@@ -6,9 +6,6 @@
         <div class="card">
           <li>
             {{ podatci }}
-            {{ podatci.url }}
-            {{ podatci.ocjena }}
-            {{ podatci.pice }}
           </li>
         </div>
       </div>
