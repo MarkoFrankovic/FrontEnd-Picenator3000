@@ -294,7 +294,7 @@ export default {
   methods: {
     izbrisi() {
       let xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "http://localhost:5000/pjesme/delete");
+      xhr.open("DELETE", "http://localhost:5000/api/pjesme/delete");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 

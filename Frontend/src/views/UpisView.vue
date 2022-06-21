@@ -81,7 +81,7 @@ export default {
   methods: {
     posalji() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:5000/pjesme/upis");
+      xhr.open("POST", "http://localhost:5000/api/pjesme/upis");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 

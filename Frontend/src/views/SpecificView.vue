@@ -33,7 +33,7 @@ export default {
   async mounted() {
     this.pice = localStorage.getItem("pice");
     console.log(this.pice);
-    let podatci = await fetch("http://localhost:5000/pjesme/" + this.pice);
+    let podatci = await fetch("http://localhost:5000/api/pjesme/" + this.pice);
     let rezultati = await podatci.json();
     this.podatci = rezultati;
     this.komentar = localStorage.getItem("komentar");
@@ -43,7 +43,7 @@ export default {
   methods: {
     izbrisi() {
       let xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "http://localhost:5000/pjesme/delete");
+      xhr.open("DELETE", "http://localhost:5000/api/pjesme/delete");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
