@@ -149,7 +149,9 @@ export default {
   async mounted() {
     this.pice = localStorage.getItem("pice");
     console.log(this.pice);
-    let podatci = await fetch("http://localhost:5000/pjesme/" + this.pice);
+    let podatci = await fetch(
+      "http://localhost:5000/pjesme/dohvacanje/" + this.pice
+    );
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
@@ -180,7 +182,7 @@ export default {
 
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
-      xhr.open("PATCH", "http://localhost:5000/pjesme");
+      xhr.open("PUT", "http://localhost:5000/pjesme/update");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
