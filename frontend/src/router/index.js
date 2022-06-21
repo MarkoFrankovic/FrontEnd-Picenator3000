@@ -24,7 +24,18 @@ const routes = [
     component: () => import(/* webpackChunkName: "korisnik" */ '../views/KorisnikView.vue')
   },
 
-  
+  {
+    path: '/delete',
+    name: 'delete',
+    component: () => import(/* webpackChunkName: "delete" */ '../views/DeleteView.vue')
+  },
+
+  {
+    path: '/specific',
+    name: 'specific',
+    component: () => import(/* webpackChunkName: "specific" */ '../views/SpecificView.vue')
+  },
+
   {
     path: '/upis',
     name: 'upis',
