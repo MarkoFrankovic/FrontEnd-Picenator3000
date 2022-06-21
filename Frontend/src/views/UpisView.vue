@@ -105,7 +105,7 @@ export default {
   methods: {
     posalji() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:5000/getanje/upis" + this.pice);
+      xhr.open("POST", "http://localhost:5000/pjesme");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -130,7 +130,7 @@ export default {
 
     izbrisi() {
       let xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "http://localhost:5000/getanje/delete" + this.pice);
+      xhr.open("DELETE", "http://localhost:5000/pjesme");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
