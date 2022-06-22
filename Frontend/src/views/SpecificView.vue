@@ -5,7 +5,7 @@
       <div class="col d-flex justify-content-center">
         <div class="card">
           <li>
-            {{ podatci.ime }}
+            {{ podatci }}
           </li>
         </div>
       </div>
