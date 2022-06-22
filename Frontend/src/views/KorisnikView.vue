@@ -181,7 +181,11 @@ export default {
 
     posalji(ocjena) {
       let xhr = new XMLHttpRequest();
-      xhr.open("PUT", "http://localhost:5000/api/pjesme");
+      xhr.open(
+        "PATCH",
+        "http://localhost:5000/api/pjesme/" +
+          this.youtubelinks[this.brojilo]._id
+      );
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
@@ -193,9 +197,8 @@ export default {
       };
 
       let podatci = {
+        _id: this.youtubelinks[this.brojilo]._id,
         ocjena: ocjena,
-        url: this.youtubelinks[this.brojilo].url,
-        pice: this.pice,
       };
 
       console.log(podatci);
