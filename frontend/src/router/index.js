@@ -37,6 +37,12 @@ const routes = [
   },
 
   {
+    path: '/specific_drink',
+    name: 'specific_drink',
+    component: () => import(/* webpackChunkName: "specific_drink" */ '../views/SpecificDrinkView.vue')
+  },
+
+  {
     path: '/upis',
     name: 'upis',
     component: () => import(/* webpackChunkName: "upis" */ '../views/UpisView.vue')
