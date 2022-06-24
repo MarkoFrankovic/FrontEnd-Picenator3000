@@ -44,8 +44,9 @@ export default {
 
   methods: {
     postavi_id(id) {
-      console.log(id);
-      this.id = localStorage.setItem("_id", id);
+      console.log("id");
+      console.log(id.$oid);
+      this.id = localStorage.setItem("_id", id.$oid);
     },
 
     natrag() {

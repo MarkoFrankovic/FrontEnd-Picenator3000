@@ -1,12 +1,17 @@
 <template>
   <div>
-    <h1>Detalji za pjesmu {{ resursi.ime }}</h1>
     <div>
+      <h1>Detalji</h1>
       <div class="col d-flex justify-content-center">
         <div class="card">
-          <l1>
-            {{ resursi }}
-          </l1>
+          <li
+            v-for="resurs in resursi"
+            :key="resurs.ime"
+            @click="postavi_id(resurs._id)"
+          >
+            Ime pjesme: {{ resurs.ime }} Url: {{ resurs.url }} Ocjena:
+            {{ resurs.ocjena }}
+          </li>
         </div>
       </div>
     </div>
@@ -26,17 +31,22 @@ export default {
   data() {
     return {
       pice: "",
-      resursi: "",
-      id: {},
+      resursi: [],
+      id: "",
     };
   },
 
   async mounted() {
-    let podatci = await fetch("http://localhost:5000/api/pjesme/" + this.id);
+    this.pice = localStorage.getItem("pice");
+    this.id = localStorage.getItem("_id");
+    console.log("Dobiveni id:");
+    console.log(this.id);
+    console.log(this.pice);
+    let podatci = await fetch(
+      "http://localhost:5000/api/pjesme/" + this.pice + "/" + this.id
+    );
     let rezultati = await podatci.json();
     this.resursi = rezultati;
-    this.id = localStorage.getItem("_id");
-    console.log(this.resursi);
   },
 
   methods: {
