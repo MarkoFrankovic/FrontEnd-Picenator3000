@@ -36,7 +36,6 @@ export default {
 
   async mounted() {
     this.pice = localStorage.getItem("pice");
-    console.log(this.pice);
     let podatci = await fetch("http://localhost:5000/api/pjesme/" + this.pice);
     let rezultati = await podatci.json();
     this.resursi = rezultati;

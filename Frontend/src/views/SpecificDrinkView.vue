@@ -27,7 +27,7 @@ export default {
     return {
       pice: "",
       resursi: "",
-      id: { ObjectId: "" },
+      id: {},
     };
   },
 
@@ -35,10 +35,8 @@ export default {
     let podatci = await fetch("http://localhost:5000/api/pjesme/" + this.id);
     let rezultati = await podatci.json();
     this.resursi = rezultati;
-    this.komentar = localStorage.getItem("komentar");
     this.id = localStorage.getItem("_id");
     console.log(this.resursi);
-    console.log(this.id);
   },
 
   methods: {
