@@ -9,7 +9,8 @@
             :key="resurs.ime"
             @click="postavi_id(resurs._id)"
           >
-            Ime pjesme: {{ resurs.ime }} Url: {{ resurs.url }} Ocjena:
+            ID: {{ resurs._id.$oid }} Ime pjesme: {{ resurs.ime }} Url:
+            {{ resurs.url }} Ocjena:
             {{ resurs.ocjena }}
           </li>
         </div>
