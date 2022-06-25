@@ -208,7 +208,7 @@ export default {
 
     posalji_komentar() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:5000/api/pjesme");
+      xhr.open("POST", "http://localhost:5000/api/pjesme/komentari");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
