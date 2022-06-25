@@ -292,30 +292,6 @@ export default {
   },
 
   methods: {
-    izbrisi() {
-      let xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "http://localhost:5000/api/pjesme/delete");
-      xhr.setRequestHeader("Accept", "application/json");
-      xhr.setRequestHeader("Content-Type", "application/json");
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          console.log(xhr.status);
-          console.log(xhr.responseText);
-        }
-      };
-
-      let podatci = {
-        ime: this.izvodac_ime_pjesme,
-        url: this.url,
-        ocjena: this.ocjena,
-        pice: this.pice,
-      };
-
-      console.log(podatci);
-      alert("Uspješno ste obrisali iz databaze");
-      xhr.send(JSON.stringify(podatci));
-    },
     biranje(pice) {
       localStorage.setItem("pice", pice);
       this.$router.push("/specific");

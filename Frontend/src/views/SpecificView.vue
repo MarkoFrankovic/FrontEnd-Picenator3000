@@ -36,7 +36,9 @@ export default {
 
   async mounted() {
     this.pice = localStorage.getItem("pice");
-    let podatci = await fetch("http://localhost:5000/api/pjesme/" + this.pice);
+    let podatci = await fetch(
+      "https://picenator3000.herokuapp.com/api/pjesme/" + this.pice
+    );
     let rezultati = await podatci.json();
     this.resursi = rezultati;
     console.log(rezultati);

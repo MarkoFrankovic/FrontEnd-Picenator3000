@@ -150,7 +150,9 @@ export default {
   async mounted() {
     this.pice = localStorage.getItem("pice");
     console.log(this.pice);
-    let podatci = await fetch("http://localhost:5000/api/pjesme/" + this.pice);
+    let podatci = await fetch(
+      "https://picenator3000.herokuapp.com/api/pjesme/" + this.pice
+    );
     let rezultati = await podatci.json();
     this.commits = rezultati;
     console.log(rezultati);
@@ -183,7 +185,7 @@ export default {
       let xhr = new XMLHttpRequest();
       xhr.open(
         "PATCH",
-        "http://localhost:5000/api/pjesme/" +
+        "https://picenator3000.herokuapp.com/api/pjesme/" +
           this.youtubelinks[this.brojilo]._id
       );
       xhr.setRequestHeader("Accept", "application/json");
@@ -208,7 +210,7 @@ export default {
 
     posalji_komentar() {
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:5000/api/komentari");
+      xhr.open("POST", "https://picenator3000.herokuapp.com/api/komentari");
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 

@@ -44,7 +44,10 @@ export default {
     console.log(this.id);
     console.log(this.pice);
     let podatci = await fetch(
-      "http://localhost:5000/api/pjesme/" + this.pice + "/" + this.id
+      "https://picenator3000.herokuapp.com/api/pjesme/" +
+        this.pice +
+        "/" +
+        this.id
     );
     let rezultati = await podatci.json();
     this.resursi = rezultati;
@@ -53,7 +56,10 @@ export default {
   methods: {
     izbrisi() {
       let xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "http://localhost:5000/api/pjesme/" + this.id);
+      xhr.open(
+        "DELETE",
+        "https://picenator3000.herokuapp.com/api/pjesme/" + this.id
+      );
       xhr.setRequestHeader("Accept", "application/json");
       xhr.setRequestHeader("Content-Type", "application/json");
 
