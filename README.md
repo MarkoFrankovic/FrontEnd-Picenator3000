@@ -10,6 +10,7 @@ Setup
 ```npm install```
 
 Compile
+
 ```npm run serve```
 
 ```npm run build```
