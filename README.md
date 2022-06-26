@@ -4,9 +4,12 @@ Ponuđeno je nekoliko alkoholnih pića. Pritiskom na jedan od njih pokreće se l
 FrontEnd projetka Pičenator3000 pisan je u Vue.js-u. 
 
 #Pokretanje
+
 Setup
+
 ```npm install```
 
 Compile
 ```npm run serve```
+
 ```npm run build```
